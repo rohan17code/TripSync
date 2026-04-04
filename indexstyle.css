@@ -1,0 +1,295 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Page background */
+body {
+  height: 100vh;
+  background: linear-gradient(to right, #3b82f6, #1e40af);
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  align-items: center;
+}
+
+.nav-btn {
+  background: white;
+  color: #1e40af;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Center section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* Card */
+.hero-card {
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  padding: 50px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.hero-card h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero-card p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* Main button */
+.main-btn {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background: #16a34a;
+}
+/* Form Page Layout */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+/* Form Card */
+.form-card {
+  background: white;
+  color: black;
+  padding: 40px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.form-card h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.form-card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* Date inputs side-by-side */
+.date-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Labels */
+.form-card label {
+  font-weight: bold;
+}
+
+
+/* Page Background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #3b82f6, #1e3a8a);
+}
+
+/* Navbar */
+.navbar {
+  color: white;
+  padding: 15px 40px;
+}
+
+/* Center Layout */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+/* Card UI */
+.form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 420px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Inputs */
+.form-card input,
+.form-card select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* Button */
+.main-btn {
+  width: 100%;
+  padding: 12px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background: #15803d;
+}
+
+
+
+/* Auth Pages Background */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+/* Card */
+.auth-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* Heading */
+.auth-card h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+.primary-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #2563eb;
+}
+
+/* Switch text */
+.auth-switch {
+  margin-top: 15px;
+}
+
+.auth-switch a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+  background: #0f172a;
+  color: white;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-section a:hover {
+  color: #4facfe;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+}
+
+
+
+

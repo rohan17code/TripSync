@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Results</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <h2>GroupTripFinder</h2>
+</div>
+
+<div class="results-container">
+
+  <!-- Results Card -->
+  <div class="results-card">
+
+    <h1>Best Destinations for Your Group</h1>
+
+    <!-- Table -->
+   <table>
+  <tr>
+    <th>Destination</th>
+    <th>Total Cost</th>
+    <th>Cost Per Person</th>
+  </tr>
+
+  <tbody id="resultsTable"></tbody>
+</table>
+
+
+  </div>
+
+  <!-- Hotel Section -->
+  <div class="hotel-section">
+    <h2>Recommended Hotels in Goa</h2>
+
+    <div class="hotel-grid">
+
+      <div class="hotel-card">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+        <h3>Beachside Resort</h3>
+        <p>₹5000 per night</p>
+      </div>
+
+      <div class="hotel-card">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+        <h3>Palm View Hotel</h3>
+        <p>₹3200 per night</p>
+      </div>
+
+      <div class="hotel-card">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d">
+        <h3>Sunset Bay Inn</h3>
+        <p>₹3500 per night</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-section">
+      <h2>GroupTripFinder</h2>
+      <p>Helping groups from different cities find the most budget-friendly travel destination together.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="creategroup.html">Create Group</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+
+    <!-- Features -->
+    <div class="footer-section">
+      <h3>Features</h3>
+      <p>✔ Group Travel Planning</p>
+      <p>✔ Budget Optimization</p>
+      <p>✔ Destination Comparison</p>
+      <p>✔ Hotel Suggestions</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: support@grouptripfinder.com</p>
+      <p>India</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 GroupTripFinder. All rights reserved.</p>
+  </div>
+
+</footer>
+
+<script>
+const result = JSON.parse(localStorage.getItem("tripResult"));
+const members = JSON.parse(localStorage.getItem("groupMembers")) || [];
+
+const table = document.getElementById("resultsTable");
+
+if (result && members.length > 0) {
+
+  const people = members.length;
+  const avgBudget = Number(result.avgBudget);
+
+  // simple cost calculation
+  const destinations = [
+    { name: "Goa", cost: avgBudget * people },
+    { name: "Jaipur", cost: avgBudget * people * 0.85 },
+    { name: "Rishikesh", cost: avgBudget * people * 0.9 }
+  ];
+
+  // sort cheapest first
+  destinations.sort((a, b) => a.cost - b.cost);
+
+  destinations.forEach((dest, index) => {
+    const row = document.createElement("tr");
+
+    if (index === 0) row.classList.add("top-choice");
+
+    row.innerHTML = `
+      <td>${dest.name} ${index === 0 ? "⭐" : ""}</td>
+      <td>₹${Math.round(dest.cost)}</td>
+      <td>₹${Math.round(dest.cost / people)}</td>
+    `;
+
+    table.appendChild(row);
+  });
+}
+</script>
+
+
+
+</body>
+</html>
+
+
+

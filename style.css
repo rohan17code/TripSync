@@ -1,0 +1,120 @@
+/* Results Page Layout */
+.results-container {
+  padding: 40px;
+}
+
+/* Card */
+.results-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Highlight Best Option */
+.top-choice {
+  background: #ecfdf5;
+  font-weight: bold;
+}
+
+/* Hotel Section */
+.hotel-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.hotel-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Hotel Cards */
+.hotel-card {
+  background: white;
+  border-radius: 12px;
+  width: 250px;
+  padding: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.hotel-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+/* FOOTER */
+
+.footer {
+  background: #0f172a;
+  color: white;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-section a:hover {
+  color: #4facfe;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+}
+
+
+
+
