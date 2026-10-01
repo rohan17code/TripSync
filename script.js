@@ -1,12 +1,6 @@
-/*************************************************
- GLOBAL STORAGE (save group members)
-*************************************************/
+
 let members = JSON.parse(localStorage.getItem("groupMembers")) || [];
 
-
-/*************************************************
- LOGIN PAGE
-*************************************************/
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
@@ -49,10 +43,6 @@ if (loginForm) {
   });
 }
 
-
-/*************************************************
- SIGNUP PAGE
-*************************************************/
 const signupForm = document.getElementById("signupForm");
 
 if (signupForm) {
@@ -88,10 +78,6 @@ if (signupForm) {
   });
 }
 
-
-/*************************************************
- CREATE GROUP PAGE
-*************************************************/
 const createGroupForm = document.getElementById("createGroupForm");
 
 if (createGroupForm) {
@@ -134,11 +120,6 @@ if (createGroupForm) {
 }
 
 
-
-
-/*************************************************
- ADD MEMBER PAGE
-*************************************************/
 const memberForm = document.getElementById("memberForm");
 
 if(memberForm){
@@ -176,9 +157,6 @@ alert("Member Added");
 });
 }
 
-/*************************************************
- RENDER MEMBERS
-*************************************************/
 function renderMembers() {
   membersList.innerHTML = "";
 
@@ -197,9 +175,6 @@ function renderMembers() {
 }
 
 
-/*************************************************
- REMOVE MEMBER
-*************************************************/
 function removeMember(id) {
   members = members.filter(member => member.id !== id);
   saveMembers();
@@ -207,17 +182,10 @@ function removeMember(id) {
 }
 
 
-/*************************************************
- SAVE TO LOCAL STORAGE
-*************************************************/
 function saveMembers() {
   localStorage.setItem("groupMembers", JSON.stringify(members));
 }
 
-
-/*************************************************
- FIND BEST DESTINATION (BASIC LOGIC)
-*************************************************/
 const findBtn = document.getElementById("findDestination");
 
 if (findBtn) {
